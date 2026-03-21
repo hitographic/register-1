@@ -1,5 +1,5 @@
 /**
- * is-a.page PR 自动化校验脚本 (v3.1 - 全能配套版)
+ * is-a.page PR 自动化校验脚本 (v3.1.1 - 全能配套版)
  * 特性:
  *  - 兼容 JSON 注释 (// 和 /* * /)
  *  - 自动识别并校验 A / AAAA / CNAME / TXT / MX / REDIRECT
@@ -20,7 +20,9 @@ const VALIDATION_MODE = process.env.VALIDATION_MODE || 'loose';
 const RESERVED_DOMAINS = new Set([
   'www', 'api', 'blog', 'mail', 'smtp', 'pop', 'imap', 
   'support', 'admin', 'root', 'status', 'billing', 'cdn', 'test',
-  'dev', 'staging', 'prod', 'official', 'security', 'ns1', 'ns2'
+  'dev', 'staging', 'prod', 'official', 'security', 'ns1', 'ns2', 'this',
+  'that', 'what', 'how', 'who', 'where', 'when', 'the', 'connect', 'login',
+  'sign', 'live'
 ]);
 
 const PUBLIC_BLOCKLIST = [
